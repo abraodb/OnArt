@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CadastroActivity"
+    android:gravity="center_vertical"
+    android:padding="30dp"
+    android:background="#1A1A1A"
+    tools:showIn="@layout/activity_cadastro">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="107dp"
+
+        android:src="@drawable/ic_logo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="nome"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txCadastroNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorWhite"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="email"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txCadastroEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorWhite"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="senha"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txCadastroSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorWhite"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="confirme sua senha"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txConfirmaSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorWhite"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btSalvarCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cadastrar"/>
+
+    <Button
+        android:id="@+id/btIrLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="já possui conta? entrar"
+        android:background="#1a1a1a"
+        android:textColor="#FFFF"/>
+</LinearLayout>

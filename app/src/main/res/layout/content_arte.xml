@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ArteActivity"
+    tools:showIn="@layout/activity_arte">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="113dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="arte"
+            android:textColor="#1a1a1a" />
+
+        <ImageView
+            android:layout_width="285dp"
+            android:layout_height="52dp"
+            android:paddingLeft="150dp"
+            android:src="@drawable/ic_logo" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_background"
+        android:id="@+id/imgView"
+        android:paddingTop="50dp"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:paddingTop="30dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="20dp">
+
+    <TextView
+        android:id="@+id/tvNomeArtista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="nome artista"
+        android:layout_weight="1"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:id="@+id/tvNomeArte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="nome"
+        android:layout_weight="1"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:id="@+id/tvValorArte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="valor"
+        android:layout_weight="1"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:id="@+id/tvDataPostagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="20/02/2020"
+        android:layout_weight="1"
+        android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDescricaoArte"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="20dp"
+        android:text="descrição"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:id="@+id/btEditaArte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar"
+        android:background="@color/colorPrimary"
+        android:textColor="#299601"/>
+    <Button
+        android:id="@+id/btExcluiArte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Excluir"
+        android:background="@color/colorPrimary"
+        android:textColor="#960101"/>
+    <Button
+        android:id="@+id/btVoltaPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Perfil"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"/>
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="50dp"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CadastraArteActivity"
+    tools:showIn="@layout/activity_cadastra_arte">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="107dp"
+        android:src="@drawable/ic_logo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="nome"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txCadastroNomeArte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorWhite"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:hint="descrição"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txCadastroDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorWhite"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="valor"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txCadastroValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorWhite"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="data"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txCadastroData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorWhite"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btUploadImagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Imagem"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="40dp"
+        android:paddingBottom="50dp"
+        />
+
+
+    <Button
+        android:id="@+id/btSalvarArte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar"/>
+    <Button
+        android:id="@+id/btSair"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sair"
+        android:background="#1a1a1a"
+        android:textColor="#FFFF"/>
+
+
+</LinearLayout>

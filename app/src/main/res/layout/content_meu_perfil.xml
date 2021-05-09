@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MeuPerfilActivity"
+    android:background="@color/colorPrimary"
+    tools:showIn="@layout/activity_meu_perfil">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="30dp"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="113dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="meu perfil"
+            android:textColor="#1a1a1a" />
+
+        <ImageView
+            android:layout_width="285dp"
+            android:layout_height="52dp"
+            android:paddingLeft="100dp"
+            android:src="@drawable/ic_logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/icon_perfil"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:id="@+id/btEditarPerfil"
+            android:layout_width="173dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#1a1a1a"
+            android:text="Editar Perfil"
+            android:textColor="#FFFF" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="nome"
+        android:textColor="@color/colorWhite"
+        android:paddingLeft="20dp"
+        />
+    <TextView
+        android:id="@+id/txEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="email"
+        android:textColor="@color/colorWhite"
+        android:paddingLeft="20dp"
+        />
+
+
+    <Button
+        android:id="@+id/btAdicionarArte"
+        android:layout_width="223dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="90dp"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:text="Adicionar arte"
+        android:textColor="@color/colorPrimary"
+        android:shadowRadius="20"
+        android:shadowColor="@color/colorWhite"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rvPerfilArtes"
+            android:scrollbars="vertical"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

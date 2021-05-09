@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".FeedActivity"
+    tools:showIn="@layout/activity_feed">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="30dp"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="113dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="feed"
+            android:textColor="#1a1a1a" />
+
+        <ImageView
+            android:layout_width="285dp"
+            android:layout_height="52dp"
+            android:paddingLeft="100dp"
+            android:src="@drawable/ic_logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:layout_weight="1"
+            android:text="A arte encontra você!"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/btMeuPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1a1a1a"
+            android:layout_weight="1"
+            android:text="Meu perfil"
+            android:textColor="#FFFF" />
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:padding="30dp"
+        android:hint="Pesquisar..."
+        >
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txPesquisar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorWhite"
+
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rvFeedArte"
+            android:scrollbars="vertical"
+            >
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>

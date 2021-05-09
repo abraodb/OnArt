@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AlteraArteActivity"
+    tools:showIn="@layout/activity_altera_arte">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="113dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="editar arte"
+            android:textColor="#1a1a1a" />
+
+        <ImageView
+            android:layout_width="285dp"
+            android:layout_height="52dp"
+            android:paddingLeft="150dp"
+            android:src="@drawable/ic_logo" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_background"
+        android:id="@+id/imgView"
+        android:paddingTop="50dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingTop="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="nome"
+            android:layout_weight="1"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txNovoNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorWhite"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="valor"
+            android:layout_weight="1"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txNovoValor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorWhite"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/tvDataPostagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20/02/2020"
+            android:layout_weight="1"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="descrição"
+        android:padding="30dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txNovaDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorWhite"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btSalvaEdicaoArte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar"
+        android:background="@color/colorPrimary"
+        android:textColor="#299601"/>
+    <Button
+        android:id="@+id/btVoltaArte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"/>
+
+
+
+</LinearLayout>
