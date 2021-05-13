@@ -11,10 +11,10 @@ public class Artista extends Usuario implements Serializable {
     }
     
     // Cadastro do Artista //
-    public Artista(String nomecompleto, String email) {
+    public Artista(String nomecompleto, String email, String senha) {
         super(nomecompleto, email, senha);
     }
-    
+
     // Lista //
     public Artista(int codusuario, String nomecompleto) {
         super(codusuario, nomecompleto);

@@ -1,5 +1,6 @@
 package com.example.onart;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -30,12 +31,29 @@ public class MeuPerfilActivity extends AppCompatActivity {
         txEmail = findViewById(R.id.txEmail);
         btEditarPerfil = findViewById(R.id.btEditarPerfil);
         btAdicionarArte = findViewById(R.id.btAdicionarArte);
+        btEditarPerfil.setOnClickListener(clickEditar);
+        btAdicionarArte.setOnClickListener(clickAddArte);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         infoApp =  (InformacoesApp) getApplicationContext();
-
     }
+
+
+    View.OnClickListener clickEditar = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent it = new Intent(MeuPerfilActivity.this, EditaPerfilActivity.class);
+            startActivity(it);
+        }
+    };
+    View.OnClickListener clickAddArte = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent it = new Intent(MeuPerfilActivity.this, CadastraArteActivity.class);
+            startActivity(it);
+        }
+    };
 
 }

@@ -17,14 +17,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import controller.ConexaoController;
-import modelDominio.Artista;
 import modelDominio.Usuario;
 
 public class MainActivity extends AppCompatActivity {
     Button btEntrar, btRecupSenha, btTelaCadastro;
     EditText txLoginEmail, txLoginSenha;
     InformacoesApp infoApp;
-    Artista artista;
+    Usuario usr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         btRecupSenha = findViewById(R.id.btRecupSenha);
         btTelaCadastro = findViewById(R.id.btTelaCadastro);
         btEntrar.setOnClickListener(clickEntrar);
-        //btRecupSenha.setOnClickListener(clickRecupSenha);
-        //btTelaCadastro.setOnClickListener(clickCadastro);
+        btRecupSenha.setOnClickListener(clickRecupSenha);
+        btTelaCadastro.setOnClickListener(clickCadastro);
         txLoginEmail = findViewById(R.id.txLoginEmail);
         txLoginSenha = findViewById(R.id.txLoginSenha);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -58,23 +57,46 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener clickEntrar = (new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Thread thread = new Thread() {
+                    @Override
+                    public void run() {
+                        ConexaoController ccont = new ConexaoController(infoApp);
+                        Usuario usr = new Usuario(txLoginEmail.getText().toString(), txLoginSenha.getText().toString());
+                        infoApp.user = ccont.efetuarLogin(usr);
+                        if (infoApp.user != null) {
+                            Intent it = new Intent(getApplicationContext(), FeedActivity.class);
+                            startActivity(it);
+                        } else {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(MainActivity.this, "Usuário ou senha inválida!", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }
 
-            Thread thread = new Thread(){
-                @Override
-                public void run() {
-                    ConexaoController ccont = new ConexaoController(infoApp);
-                    Usuario usr = new Usuario(txLoginEmail.getText().toString(), txLoginSenha.getText().toString());
-                    infoApp.user = ccont.efetuarLogin(usr);
-
-                }
-            };
-            thread.start();
+                    }
+                };
+                thread.start();
             }
-        });
-  }
+  });
 
 
+    View.OnClickListener clickCadastro = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent it = new Intent(MainActivity.this, CadastroActivity.class);
+            startActivity(it);
+        }
+    };
 
+    View.OnClickListener clickRecupSenha = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent it = new Intent(MainActivity.this, AlteraSenhaActivity.class);
+            startActivity(it);
+        }
+    };
 
 
 
